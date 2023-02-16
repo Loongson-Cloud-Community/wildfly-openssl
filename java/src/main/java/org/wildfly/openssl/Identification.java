@@ -124,6 +124,9 @@ class Identification {
                             cpuName = "ppc64";
                         } else if (sysArch.startsWith("PPC") || sysArch.startsWith("POWER")) {
                             cpuName = "ppc";
+                        } else if (sysArch.startsWith("LOONGARCH64")) {
+                            hasEndian = true;
+                            cpuName = "loongarch64";
                         } else if (sysArch.startsWith("ARMV7A") || sysArch.contains("AARCH32")) {
                             hasEndian = true;
                             hasHardFloatABI = true;
